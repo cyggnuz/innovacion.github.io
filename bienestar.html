@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Salud Mental INACAP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --rojo: #c62828;
+      --gris-claro: #f5f5f5;
+      --blanco: #ffffff;
+      --gris: #eeeeee;
+      --sombra: rgba(0, 0, 0, 0.1);
+      --foco: #ff6b6b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--gris-claro);
+      color: #333;
+      line-height: 1.5;
+    }
+
+    header {
+      background: var(--rojo);
+      color: var(--blanco);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section.convenios {
+      margin-bottom: 3rem;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    section.convenios > article {
+      background: var(--blanco);
+      flex: 1 1 300px;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px var(--sombra);
+      transition: transform 0.2s ease;
+    }
+
+    section.convenios > article:hover,
+    section.convenios > article:focus-within {
+      transform: translateY(-5px);
+      outline: none;
+      box-shadow: 0 6px 15px rgba(198, 40, 40, 0.7);
+    }
+
+    section.convenios h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+      color: var(--rojo);
+    }
+
+    section.convenios p,
+    section.convenios ul {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    section.convenios ul {
+      padding-left: 1.2rem;
+    }
+
+    section.lineas-ayuda {
+      margin-bottom: 3rem;
+      overflow-x: auto;
+    }
+
+    section.lineas-ayuda h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--rojo);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      background: var(--blanco);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px var(--sombra);
+    }
+
+    th,
+    td {
+      padding: 0.75rem;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background: var(--rojo);
+      color: var(--blanco);
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    a {
+      color: var(--rojo);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+
+    /* Chatbot box */
+    .chatbot {
+      background: #e3e3e3;
+      padding: 1rem;
+      border-left: 6px solid var(--rojo);
+      border-radius: 8px;
+      font-style: italic;
+      margin-bottom: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    summary {
+      font-weight: bold;
+      color: var(--rojo);
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-bottom: 1rem;
+      outline-offset: 4px;
+    }
+
+    details {
+      margin-bottom: 1.5rem;
+    }
+
+    details[open] summary::after {
+      content: "▲";
+      float: right;
+    }
+
+    summary::after {
+      content: "▼";
+      float: right;
+    }
+
+    /* Focus visible for keyboard users */
+    a:focus,
+    summary:focus,
+    button:focus {
+      outline: 3px solid var(--foco);
+      outline-offset: 2px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      section.convenios {
+        flex-direction: column;
+      }
+      main {
+        padding: 1rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 tabindex="0">Salud Mental INACAP Valparaíso</h1>
+</header>
+
+<main>
+
+  <section class="convenios" aria-label="Convenios de atención psicológica">
+    <article tabindex="0" aria-labelledby="cap-gm-title">
+      <h2 id="cap-gm-title">CAP Universidad Gabriela Mistral</h2>
+      <p>Atención psicológica con valores accesibles:</p>
+      <ul>
+        <li>Estudiantes en práctica: $7.000</li>
+        <li>Psicólogos titulados: $12.000</li>
+      </ul>
+      <p>Modalidad presencial u online. No atiende casos de alta complejidad.</p>
+      <p><em>Formulario de contacto próximamente.</em></p>
+    </article>
+
+    <article tabindex="0" aria-labelledby="achs-title">
+      <h2 id="achs-title">Convenio ACHS Salud</h2>
+      <p>Atenciones psicológicas presenciales y online:</p>
+      <ul>
+        <li>Presencial Fonasa: $6.440 | Particular: $28.048</li>
+        <li>Online Fonasa: $5.470 | Particular: $23.847</li>
+      </ul>
+      <p><a href="https://achs.cl/salud" target="_blank" rel="noopener">Agendar en achs.cl/salud</a></p>
+    </article>
+
+    <article tabindex="0" aria-labelledby="salud5i-title">
+      <h2 id="salud5i-title">Salud 5i</h2>
+      <p>Telemedicina con equipo multidisciplinario en salud mental:</p>
+      <ul>
+        <li>Trastornos del ánimo, alimentación, ansiedad</li>
+        <li>Duelos, consumo de sustancias, mindfulness</li>
+      </ul>
+      <p>Aranceles preferenciales para estudiantes INACAP.</p>
+    </article>
+
+    <article class="chatbot" tabindex="0" aria-label="Chatbot de salud mental">
+      💬 Aquí se integrará un <strong>chatbot</strong> para preguntas frecuentes, orientación emocional y guía de recursos.
+    </article>
+  </section>
+
+  <section class="lineas-ayuda" aria-label="Líneas de ayuda y apoyo psicológico">
+    <h2 tabindex="0">Líneas de Ayuda y Apoyo Psicológico</h2>
+    <table role="table">
+      <thead>
+        <tr>
+          <th scope="col">Línea</th>
+          <th scope="col">Apoyo</th>
+          <th scope="col">Web</th>
+          <th scope="col">Contacto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>SALUD RESPONDE</td><td>Contención emocional</td><td><a href="https://saludresponde.minsal.cl" target="_blank" rel="noopener">saludresponde.minsal.cl</a></td><td>600 360 7777</td></tr>
+        <tr><td>HOSPITAL DIGITAL</td><td>Contención emocional</td><td><a href="https://www.hospitaldigital.gob.cl" target="_blank" rel="noopener">hospitaldigital.gob.cl</a></td><td>Página web</td></tr>
+        <tr><td>LÍNEA LIBRE</td><td>Ayuda a menores</td><td><a href="https://linealibre.cl" target="_blank" rel="noopener">linealibre.cl</a></td><td>1515</td></tr>
+        <tr><td>INJUV</td><td>Jóvenes y salud mental</td><td><a href="https://hablemosdetodo.injuv.gob.cl" target="_blank" rel="noopener">hablemosdetodo</a></td><td>Chat</td></tr>
+        <tr><td>CHILE UNIDO</td><td>Contención emocional</td><td><a href="http://www.chileunido.cl" target="_blank" rel="noopener">chileunido.cl</a></td><td>800 226 226</td></tr>
+        <tr><td>PSICÓLOGOS X CHILE</td><td>Online a bajo costo</td><td><a href="https://psicologosxchile.cl" target="_blank" rel="noopener">psicologosxchile.cl</a></td><td>+56967613603</td></tr>
+        <tr><td>QUÉDATE - MINSAL</td><td>Prevención suicidio</td><td><a href="https://www.quedate.cl" target="_blank" rel="noopener">quedate.cl</a></td><td>*4141</td></tr>
+        <tr><td>SENDA</td><td>Drogas y alcohol</td><td><a href="https://senda.gob.cl" target="_blank" rel="noopener">senda.gob.cl</a></td><td>1412</td></tr>
+        <tr><td>FONO INFANCIA</td><td>Crianza y apoyo</td><td><a href="http://www.fonoinfancia.cl" target="_blank" rel="noopener">fonoinfancia.cl</a></td><td>800 200 818</td></tr>
+        <tr><td>TODO MEJORA</td><td>LGBTQ+, bullying</td><td><a href="https://todomejora.org" target="_blank" rel="noopener">todomejora.org</a></td><td>Web / App</td></tr>
+        <tr><td>APOYO VÍCTIMAS</td><td>Legal y psicológico</td><td><a href="http://apoyovictimas.cl" target="_blank" rel="noopener">apoyovictimas.cl</a></td><td>600 818 1000</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+</body>
+</html>
